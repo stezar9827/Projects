@@ -1,0 +1,65 @@
+body {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  background:#eee;
+  font-family:Arial, sans-serif;
+}
+
+.scene {
+  width:200px;
+  height:200px;
+  perspective:600px;
+  margin-bottom:20px;
+}
+
+.cube {
+  width:200px;
+  height:200px;
+  position:relative;
+  transform-style:preserve-3d;
+  transition: transform 2s ease;
+}
+
+.face {
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:#fff;
+  border:2px solid #000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.pip {
+  width:30px;
+  height:30px;
+  background:#000;
+  border-radius:50%;
+}
+
+.front  { transform: rotateY(0deg) translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+/* Botón vistoso */
+button {
+  padding:15px 30px;
+  font-size:18px;
+  font-weight:bold;
+  color:#fff;
+  background:#0078d7;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background:#005a9e;
+}
